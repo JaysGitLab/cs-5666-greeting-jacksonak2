@@ -1,0 +1,9 @@
+/**
+ *  Greeting v1 
+ *  author: Amanda Jackson
+ */
+public class Greeting {
+    public static void main(String[] args) {
+        System.out.println("Hello, World.");
+    }
+}
