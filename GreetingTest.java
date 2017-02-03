@@ -30,5 +30,16 @@ public class GreetingTest {
         System.setOut(old);
         assertEquals("Hello, Jay.\n", outContent.toString());
     }
+    
+    @Test
+    public void v2CommandTest() {
+        PrintStream ps = new PrintStream(outContent);
+        PrintStream old = System.out;
+        System.setOut(ps);
+        greeting.main("George");
+        System.out.flush();
+        System.setOut(old);
+        assertEquals("Hello, George.\n", outContent.toString());
+    }
 
 }
