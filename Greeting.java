@@ -10,4 +10,8 @@ public class Greeting {
     public void v2JayGreeting() {
         System.out.println("Hello, Jay.");
     }
+
+    public static void main (String... args) {
+        System.out.println("Hello, " + args[0] + ".");
+    }
 }
