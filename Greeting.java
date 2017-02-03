@@ -1,9 +1,9 @@
 /**
  *  Greeting v1 
- *  author: Amanda Jackson
+ *  @author: Amanda Jackson
  */
 public class Greeting {
-    public static void main(String[] args) {
+    public Greeting() {
         System.out.println("Hello, World.");
     }
 }
