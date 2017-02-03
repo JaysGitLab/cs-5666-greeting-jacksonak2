@@ -8,14 +8,27 @@ import java.io.*;
 
 public class GreetingTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private Greeting greeting = new Greeting();
     @Test
-    public void out() {
+    public void v1test() {
         PrintStream ps = new PrintStream(outContent);
         PrintStream old = System.out;
         System.setOut(ps);
-        Greeting greeting = new Greeting();
+        greeting.v1Greeting();
         System.out.flush();
         System.setOut(old);
         assertEquals("Hello, World.\n", outContent.toString());
     }
+    
+    @Test
+    public void v2JayTest() {
+        PrintStream ps = new PrintStream(outContent);
+        PrintStream old = System.out;
+        System.setOut(ps);
+        greeting.v2JayGreeting();
+        System.out.flush();
+        System.setOut(old);
+        assertEquals("Hello, Jay.\n", outContent.toString());
+    }
+
 }
